@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Aderaldo Anderson S.V Amorim">
+    <meta name="description"
+        content="Kimera Code, site com soluções praticas para o seu dia a dia, soluções para empresas, desenvolvimento de Sistemas, Sites e APP.">
+    <meta name="keywords" content="Sites, Sistemas, web aplicações, Desenvolvimento, app, jogos">
+    <meta property="og:site_name" content="https://kimcode.com.br">
+    <meta property="og:url" content="https://kimerakil.github.io/kimcode/">
+    <meta property="og:title" content="Sistema: Conversor Nota Musical Gaita">
+    <meta property="og:description"
+        content="Sistema para converter notas musicais de gaita para sigla ou notas e números">
+    <meta property="og:image" content="https://kimerakil.github.io/kimcode/img/KimCodeLogo.png">
+    <title>Conversor Gaita</title>
+</head>
+
+<body>
+    <header>
+        <h2>Conversor Notas Gaita C</h2>
+        <img src="https://kimerakil.github.io/kimcode/img/KimCodeLogo.png" alt="logo">
+    </header>
+    <div class="top">
+        <div class="seletor">
+            <label for="optionsNotes">Notas de Entrada:
+                <select name="optionsNotes" id="optionsNotes">
+                    <option value="notas" selected>Notas (DÓ, RÉ, MÍ)</option>
+                    <option value="sigla">Sigla (C, E, G)</option>
+                    <option value="gaita">Gaita (1, 2, 3)</option>
+                </select>
+            </label>
+            <label for="optConvert">Notas de Saída:
+                <select name="optConvert" id="optConvert">
+                    <option value="notas">Notas (DÓ, RÉ MÍ)</option>
+                    <option value="sigla">Sigla (C, E, G)</option>
+                    <option value="gaita" selected>Gaita (1, 2, 3)</option>
+                </select>
+            </label>
+        </div>
+        <h2>Gaita C</h2>
+        <div class="gaita">
+            <div class="assoprar">
+                <button onclick="assoprar(0)">DÓ</button>
+                <button onclick="assoprar(1)">MI</button>
+                <button onclick="assoprar(2)">SOL</button>
+                <button onclick="assoprar(3)">DÓ</button>
+                <button onclick="assoprar(4)">MI</button>
+                <button onclick="assoprar(5)">SOL</button>
+                <button onclick="assoprar(6)">DÓ</button>
+                <button onclick="assoprar(7)">MI</button>
+                <button onclick="assoprar(8)">SOL</button>
+                <button onclick="assoprar(9)">DÓ</button>
+            </div>
+            <div class="aspirar">
+                <button onclick="aspirar(0)">RÉ</button>
+                <button onclick="aspirar(1)">SOL</button>
+                <button onclick="aspirar(2)">SI</button>
+                <button onclick="aspirar(3)">RÉ</button>
+                <button onclick="aspirar(4)">FÁ</button>
+                <button onclick="aspirar(5)">LÁ</button>
+                <button onclick="aspirar(6)">SÍ</button>
+                <button onclick="aspirar(7)">RÉ</button>
+                <button onclick="aspirar(8)">FÁ</button>
+                <button onclick="aspirar(9)">LÁ</button>
+            </div>
+        </div>
+    </div>
+    <h2>Resultado</h2>
+    <div class="box">
+    </div>
+    <div class="butOpts">
+        <button onclick="clearBox()">Limpar Lista</button>
+        <button onclick="gerarPDF()">Salvar PDF</button>
+    </div>
+    <footer>
+        <p>Desenvolvido por: <b>Aderaldo Anderson S.V Amorim</b></p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script src="kim.js"></script>
+</body>
+
+</html>
